@@ -1,4 +1,10 @@
 <script>
-	/* window.location.href = "http://5.76.64.47:81/bots/kron/index.php"; */
+	var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php";
+	if (window.location.search === '') {
+		window.location.href = url;
+	}else{
+		window.location.href = url+window.location.search;
+	}
+	
 </script>
 
