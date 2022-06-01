@@ -1,9 +1,14 @@
 <script>
 	var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php";
-	if (window.location.search === '') {
+	
+	var params = window.location.search;
+	params = params.replace(/&amp;/g, "&");
+	
+	
+	if (params === '') {
 		window.location.href = url;
 	}else{
-		window.location.href = url+window.location.search;
+		window.location.href = url+params;
 	}
 	
 </script>
