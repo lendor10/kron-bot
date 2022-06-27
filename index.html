@@ -14,7 +14,7 @@
 </head>
 
 
-<div class="iframe_body"><h4><i>Через 3 секунды начнется загрузка приложения</i></h4></div>
+<div class="iframe_body"><h4 style="background: white; margin-top: 40px"><i>Через 3 секунды произойдет переадресация на сайт</i></h4></div>
 
 <script>
 	
@@ -22,19 +22,19 @@
 	function setLoad() {
 		let iframe_body = document.getElementsByClassName('iframe_body')[0];
 	
-		var url = "https://vk-bots.ddns.net:444/bots/kron/site/mini_app/index.php";
+		var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php";
 		
 		var params = window.location.search;
 		params = params.replace(/&amp;/g, "&");
 		
 		
 		if (params === '') {
-			<!-- window.location.href = url; -->
+			window.location.href = url;
 			<!-- iframe_body.innerHTML = '<a href="'+url+'" target="blank">click</a>'; -->
-			iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+'"></iframe>';
+			<!-- iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+'"></iframe>'; -->
 		}else{
-			iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+params+'"></iframe>';
-			<!-- window.location.href = url+params; -->
+			<!-- iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+params+'"></iframe>'; -->
+			window.location.href = url+params;
 		}
 	}
 
