@@ -4,7 +4,8 @@
 	<title>Чат-менеджер</title>
 	
 	<style>
-		body { margin: 0; background-color: #151515; color: white;}
+		body { margin: 0; background-color: #151515; color: white; }
+		a { color:#83a5cb; }
 	</style>
 	
 	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
@@ -27,7 +28,7 @@
 			url = url+params;
 		}
 		
-		iframe_body.innerHTML = '<h4 style="margin: 60px 10px 0px 10px;"><i>Через 3 секунды произойдет<br>переадресация на сайт.</i><br><br>Если этого не произошло, нажмите <a href="'+url+'" style="color:#83a5cb;">сюда</a>.</h4>';
+		iframe_body.innerHTML = '<h4 style="margin: 60px 10px 0px 10px;"><i>Через 3 секунды произойдет<br>переадресация на сайт.</i><br><br>Если этого не произошло, нажмите <a href="'+url+'">сюда</a>.</h4>';
 	</script>
 </head>
 
