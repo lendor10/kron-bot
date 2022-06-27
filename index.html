@@ -19,9 +19,9 @@
 	if (params === '') {
 		<!-- window.location.href = url; -->
 		<!-- iframe_body.innerHTML = '<a href="'+url+'" target="blank">click</a>'; -->
-		iframe_body.innerHTML = '<iframe src="'+url+'"></iframe>';
+		iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+'"></iframe>';
 	}else{
-		iframe_body.innerHTML = '<iframe src="'+url+params+'"></iframe>';
+		iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+params+'"></iframe>';
 		<!-- window.location.href = url+params; -->
 	}
 </script>
