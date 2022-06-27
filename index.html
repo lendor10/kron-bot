@@ -1,16 +1,22 @@
+<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 <script>
-	var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php";
-	
-	var params = window.location.search;
-	params = params.replace(/&amp;/g, "&");
-	
-	
-	if (params === '') {
-		window.location.href = url;
-	}else{
-		window.location.href = url+params;
-	}
+	vkBridge.send('VKWebAppInit'); // Sends event to client
 	
 </script>
 
+<!-- <script> -->
+	<!-- var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php"; -->
+	
+	<!-- var params = window.location.search; -->
+	<!-- params = params.replace(/&amp;/g, "&"); -->
+	
+	
+	<!-- if (params === '') { -->
+		<!-- window.location.href = url; -->
+	<!-- }else{ -->
+		<!-- window.location.href = url+params; -->
+	<!-- } -->
+	
+<!-- </script> -->
 
+<h2>Hello World!</h2>
