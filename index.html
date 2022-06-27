@@ -19,11 +19,11 @@
 	if (params === '') {
 		<!-- window.location.href = url; -->
 		<!-- iframe_body.innerHTML = '<a href="'+url+'" target="blank">click</a>'; -->
+		iframe_body.innerHTML = '<iframe src="'+url+'"></iframe>';
 	}else{
-		<!-- iframe_body.innerHTML = '<a href="'+url+params+'" target="blank">click</a>'; -->
+		iframe_body.innerHTML = '<iframe src="'+url+params+'"></iframe>';
 		<!-- window.location.href = url+params; -->
 	}
-	iframe_body.innerHTML = '1234';
 </script>
 
 
