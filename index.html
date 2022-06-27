@@ -11,15 +11,9 @@
 	<script>
 		vkBridge.send('VKWebAppInit'); // Sends event to client
 	</script>
-</head>
-
-
-<div class="iframe_body"><h4 style="margin: 60px 10px 0px 10px;"><i>Через 3 секунды произойдет<br>переадресация на сайт</i></h4></div>
-
-<script>
 	
 	
-	function setLoad() {
+	<script>
 		let iframe_body = document.getElementsByClassName('iframe_body')[0];
 	
 		var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php";
@@ -27,15 +21,30 @@
 		var params = window.location.search;
 		params = params.replace(/&amp;/g, "&");
 		
-		
 		if (params === '') {
+			url = url;
+		}else{
+			url = url+params;
+		}
+		
+		iframe_body.innerHTML = '<h4 style="margin: 60px 10px 0px 10px;"><i>Через 3 секунды произойдет<br>переадресация на сайт.</i><br><br>Если этого не произошло, нажмите <a href="'+url+'" style="color:#83a5cb;">сюда</a>.</h4>';
+	</script>
+</head>
+
+
+<div class="iframe_body"></div>
+
+<script>
+	
+	function setLoad() {
+		<!-- if (params === '') { -->
 			window.location.href = url;
 			<!-- iframe_body.innerHTML = '<a href="'+url+'" target="blank">click</a>'; -->
 			<!-- iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+'"></iframe>'; -->
-		}else{
+		<!-- }else{ -->
 			<!-- iframe_body.innerHTML = '<iframe style="height:100%; width:100%; border:0;" src="'+url+params+'"></iframe>'; -->
-			window.location.href = url+params;
-		}
+			<!-- window.location.href = url+params; -->
+		<!-- } -->
 	}
 
 	setTimeout(setLoad, 3000);
