@@ -1,8 +1,15 @@
-<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-<script>
-	vkBridge.send('VKWebAppInit'); // Sends event to client
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+	<meta charset="UTF-8">
+	<title>Чат-менеджер</title>
 	
-</script>
+	
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+	<script>
+		vkBridge.send('VKWebAppInit'); // Sends event to client
+	</script>
+</head>
+
 
 <div class="iframe_body"></div>
 
@@ -25,6 +32,3 @@
 		<!-- window.location.href = url+params; -->
 	}
 </script>
-
-
-<!-- <iframe src="https://www.w3schools.com"></iframe> -->
