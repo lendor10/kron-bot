@@ -4,19 +4,27 @@
 	
 </script>
 
-<!-- <script> -->
-	<!-- var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php"; -->
-	
-	<!-- var params = window.location.search; -->
-	<!-- params = params.replace(/&amp;/g, "&"); -->
+<script>
 	
 	
-	<!-- if (params === '') { -->
+	let iframe_body = document.getElementsByClassName('iframe_body')[0];
+	
+	var url = "http://5.76.64.47:81/bots/kron/site/mini_app/index.php";
+	
+	var params = window.location.search;
+	params = params.replace(/&amp;/g, "&");
+	
+	
+	if (params === '') {
 		<!-- window.location.href = url; -->
-	<!-- }else{ -->
+		iframe_body.innerHTML = '<a href="'+url+'" target="blank">click</a>';
+	}else{
+		iframe_body.innerHTML = '<a href="'+url+params+'" target="blank">click</a>';
 		<!-- window.location.href = url+params; -->
-	<!-- } -->
+	}
 	
-<!-- </script> -->
+</script>
 
-<h2>Hello World!</h2>
+
+<div class="iframe_body"></div>
+<!-- <iframe src="https://www.w3schools.com"></iframe> -->
